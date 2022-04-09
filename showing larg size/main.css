@@ -1,0 +1,219 @@
+/*start global rules*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #ececec;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "cairo" sans-serif;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.container {
+  padding-left: 6%;
+  padding-right: 6%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+/* small*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium*/
+@media (min-width: 992px) {
+  .container {
+    width: 90%;
+  }
+}
+/* large*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* start the image section  */
+.product .container {
+  display: flex;
+  justify-content: space-between;
+}
+.product .pictures {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+}
+.product .pictures ul {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+.product .pictures ul li {
+  cursor: pointer;
+}
+.product .pictures ul li a {
+  position: relative;
+  width: 7px;
+  height: 25px;
+  display: inline-block;
+  transition: var(--main-transition);
+}
+.product .pictures ul li a:hover::before {
+  background-color: #333;
+  transition: var(--main-transition);
+}
+.product .pictures ul li a.active::before {
+  background-color: #333;
+  transition: var(--main-transition);
+}
+.product .pictures ul li a::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #aca9a9;
+}
+.product .imgs .img {
+  width: 500px;
+  height: 600px;
+}
+.product .pictures img {
+  width: 100%;
+}
+.product .details {
+  width: 40%;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.sub-container {
+  position: relative;
+}
+.sub-container .abs {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.sub-container .fix {
+  position: fixed;
+  top: 50px;
+  right: 11%;
+  width: 31%;
+}
+.product .details .product-info p.price {
+  font-size: 30px;
+  font-weight: 600;
+}
+.product .details .product-info h2 {
+  margin-top: 20px;
+}
+.product .details .product-info p:last-of-type {
+  margin-top: 40px;
+}
+.product .thumbnails {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-top: 50px;
+}
+.product .thumbnails > div {
+  width: 100px;
+  height: 120px;
+}
+.product .thumbnails div img {
+  cursor: pointer;
+}
+.product .thumbnails div img.active {
+  border: 1px solid #333;
+}
+.product .thumbnails > div img {
+  width: 100%;
+  height: 100%;
+}
+.product .product-details {
+  margin-top: 150px;
+  padding-top: 100px;
+}
+.product .product-details h2 {
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.product .product-details p {
+  margin-top: 20px;
+  color: #333;
+}
+
+.product .product-details button {
+  margin-top: 30px;
+  text-transform: capitalize;
+  font-weight: 400;
+  background-color: transparent;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+.product .product-details button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.full-page-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.364);
+  display: none;
+}
+.full-page-img .pic {
+  width: 50%;
+  height: 60%;
+  margin: auto;
+  margin-top: 15%;
+}
+.full-page-img .pic img {
+  width: 100%;
+  height: 100%;
+}
+
+.full-page-img button {
+  position: fixed;
+  top: 8%;
+  right: 10%;
+  font-size: 33px;
+  background-color: transparent;
+  border: none;
+  color: #f00;
+  font-weight: 500;
+  cursor: pointer;
+}
